@@ -29,6 +29,7 @@ class _SplashScreensState extends State<SplashScreens> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
+      backgroundColor: AppColors.backgroundColor,
       body: Center(
         child: Image.asset(AppImages.splashScreens),
       ),
