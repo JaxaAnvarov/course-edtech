@@ -9,4 +9,6 @@ class AppColors {
   static Color redColor = const Color(0xFFE3562A);
   static Color hingTextColor = const Color(0xFF78746D);
   static Color titleTextColor = const Color(0xFF3C3A36);
+  static Color borderColor = const Color(0xFFBEBAB3);
+  static Color defaultIconColor = const Color(0xFFBEBAB3);
 }

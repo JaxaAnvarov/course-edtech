@@ -1,8 +1,22 @@
-import 'package:course_ed_tech/core/routes/routes.dart';
+import 'package:course_ed_tech/core/widgets/buttons/bottom_navigation_bar.dart';
+import 'package:course_ed_tech/provider/update_provider.dart';
+import 'package:course_ed_tech/routes/app_routes.dart';
+import 'package:course_ed_tech/screens/courses/course_page.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+
+        ChangeNotifierProvider(
+          create: (context) => UpdateProvider(),
+        ),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -16,6 +30,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      
       initialRoute: '/',
       onGenerateRoute: (RouteSettings routeSettings) {
         return AppRoutes.generateRoute(routeSettings);

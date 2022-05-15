@@ -1,15 +1,16 @@
 import 'package:course_ed_tech/core/widgets/buttons/bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
-class SettingsPage extends StatelessWidget {
-  const SettingsPage({Key? key}) : super(key: key);
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text('Setting Page'),
+        child: Text("Profile Page"),
       ),
+
     );
   }
 }

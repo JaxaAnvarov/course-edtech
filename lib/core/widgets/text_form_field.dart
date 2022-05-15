@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:course_ed_tech/core/imports/imporst.dart';
+import 'package:flutter/services.dart';
 
 class MyTextFormField extends StatelessWidget {
   MyTextFormField({
@@ -9,6 +10,10 @@ class MyTextFormField extends StatelessWidget {
     this.obscureText,
     required this.thisControllers,
     this.hingText,
+    this.onChanged,
+    this.inputFormatters,
+    this.validator,
+    this.textInputType
   }) : super(key: key);
 
   TextEditingController thisControllers;
@@ -16,12 +21,20 @@ class MyTextFormField extends StatelessWidget {
   bool? obscureText;
   VoidCallback onPress;
   Widget icon;
+  List<TextInputFormatter>? inputFormatters;
+  Function(String)? onChanged;
+  FormFieldValidator<String>? validator;
+  TextInputType? textInputType;
 
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return TextFormField(
+      keyboardType: textInputType,
       controller: thisControllers,
+      onChanged: onChanged,
+      inputFormatters: inputFormatters,
+      validator: validator,
       decoration: InputDecoration(
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16.0),

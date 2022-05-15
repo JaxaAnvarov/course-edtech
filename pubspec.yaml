@@ -15,6 +15,11 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
+  flutter_svg: ^1.0.3
+  provider: ^6.0.2
+  flutter_bloc: ^8.0.1
+  bloc: ^8.0.3
+  mask_text_input_formatter: ^2.3.0
 
 dev_dependencies:
   flutter_test:
@@ -28,6 +33,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/icons/
   #   - images/a_dot_ham.jpeg
 
   # fonts:

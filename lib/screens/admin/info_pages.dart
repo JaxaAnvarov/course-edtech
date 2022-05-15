@@ -1,7 +1,4 @@
-import 'package:course_ed_tech/core/widgets/buttons/elevated_button.dart';
-import 'package:course_ed_tech/core/widgets/text_widgets/subtitles_text_widget.dart';
-import 'package:course_ed_tech/core/widgets/text_widgets/title_text_widget.dart';
-import 'package:course_ed_tech/screens/settings/settings_page.dart';
+import 'package:course_ed_tech/screens/auth/log_in.dart';
 import 'package:flutter/material.dart';
 import 'package:course_ed_tech/core/imports/imporst.dart';
 
@@ -24,7 +21,7 @@ class _InfoPagesState extends State<InfoPages> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               height: getHeight(300.0),
               width: getWidth(300.0),
               // color: Colors.cyanAccent,
@@ -84,7 +81,7 @@ class _InfoPagesState extends State<InfoPages> {
                     ? _currentIndex += 1
                     : Navigator.of(context).pushAndRemoveUntil(
                         MaterialPageRoute(
-                            builder: (context) => const SettingsPage()),
+                            builder: (context) =>  LogInPage()),
                         (Route<dynamic> route) => false);
                 setState(() {});
               },
