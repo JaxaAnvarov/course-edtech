@@ -11,4 +11,5 @@ class AppColors {
   static Color titleTextColor = const Color(0xFF3C3A36);
   static Color borderColor = const Color(0xFFBEBAB3);
   static Color defaultIconColor = const Color(0xFFBEBAB3);
+  static Color transparentColor = Colors.transparent;
 }

@@ -16,6 +16,7 @@ class SingInCubit extends Cubit<SingInState> {
 
   void onPress() {
     if (validateKey.currentState!.validate()) {
+      Navigator.pushNamed(context, "/bottomNavigationBar");
     } else {
       isValidateState = true;
       emit(SingInValidateState(isValidateState));

@@ -5,4 +5,6 @@ class AppIcons {
   static const String profile = 'assets/icons/profile.svg';
   static const String course = 'assets/icons/course.svg';
   static const String settings = 'assets/icons/settings.svg';
+  static const String notification = 'assets/icons/notification.svg';
+  static const String search = 'assets/icons/search.svg';
 }

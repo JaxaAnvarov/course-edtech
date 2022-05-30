@@ -1,3 +1,4 @@
+import 'package:course_ed_tech/core/components/app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:course_ed_tech/core/imports/imporst.dart';
 
@@ -35,24 +36,7 @@ class SingInPage extends StatelessWidget {
 
   _buildScaffold(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pushAndRemoveUntil(
-              context,
-              MaterialPageRoute(builder: (context) => LogInPage()),
-              (route) => false,
-            );
-          },
-          icon: CircleAvatar(
-            radius: getWidth(24.0),
-            backgroundImage: AssetImage(AppImages.arrowBack),
-            backgroundColor: Colors.transparent,
-          ),
-        ),
-      ),
+      appBar: MyAppBar(thisTitle: ""),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(
